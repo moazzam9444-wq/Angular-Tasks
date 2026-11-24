@@ -1,0 +1,77 @@
+<h2>Our Products</h2>
+
+<div class="products-container">
+  <div class="product-card">
+    <img [src]="ArrayOfProducts[0].image" width="250px" />
+
+    <h3>{{ ArrayOfProducts[0].name }}</h3>
+
+    <p>{{ ArrayOfProducts[0].description }}</p>
+
+    <span>{{ ArrayOfProducts[0].price }}</span>
+    <br />
+    <p [style.color]="ArrayOfProducts[0].isAvailable ? 'green' : 'red'">
+      {{ ArrayOfProducts[0].isAvailable ? 'Available' : 'Out of Stock' }}
+    </p>
+    <button (click)="msg()" [disabled]="!ArrayOfProducts[0].isAvailable">Buy Now</button>
+  </div>
+  <div class="product-card">
+    <img [src]="ArrayOfProducts[1].image" width="250px" />
+
+    <h3>{{ ArrayOfProducts[1].name }}</h3>
+
+    <p>{{ ArrayOfProducts[1].description }}</p>
+
+    <span>{{ ArrayOfProducts[1].price }}</span>
+    <br />
+    <p [style.color]="ArrayOfProducts[1].isAvailable ? 'green' : 'red'">
+      {{ ArrayOfProducts[1].isAvailable ? 'Available' : 'Out of Stock' }}
+    </p>
+    <button (click)="msg()" [disabled]="!ArrayOfProducts[1].isAvailable">Buy Now</button>
+  </div>
+
+  <div class="product-card">
+    <img [src]="ArrayOfProducts[2].image" width="250px" />
+
+    <h3>{{ ArrayOfProducts[2].name }}</h3>
+
+    <p>{{ ArrayOfProducts[2].description }}</p>
+
+    <span>{{ ArrayOfProducts[2].price }}</span>
+    <br />
+    <p [style.color]="ArrayOfProducts[2].isAvailable ? 'green' : 'red'">
+      {{ ArrayOfProducts[2].isAvailable ? 'Available' : 'Out of Stock' }}
+    </p>
+    <button (click)="msg()" [disabled]="!ArrayOfProducts[2].isAvailable">Buy Now</button>
+  </div>
+
+  <div class="product-card">
+    <img [src]="ArrayOfProducts[3].image" width="250px" />
+
+    <h3>{{ ArrayOfProducts[3].name }}</h3>
+
+    <p>{{ ArrayOfProducts[3].description }}</p>
+
+    <span>{{ ArrayOfProducts[3].price }}</span>
+    <br />
+    <p [style.color]="ArrayOfProducts[3].isAvailable ? 'green' : 'red'">
+      {{ ArrayOfProducts[3].isAvailable ? 'Available' : 'Out of Stock' }}
+    </p>
+    <button (click)="msg()" [disabled]="!ArrayOfProducts[3].isAvailable">Buy Now</button>
+  </div>
+
+  <div class="product-card">
+    <img [src]="ArrayOfProducts[4].image" width="250px" />
+
+    <h3>{{ ArrayOfProducts[4].name }}</h3>
+
+    <p>{{ ArrayOfProducts[4].description }}</p>
+
+    <span>{{ ArrayOfProducts[4].price }}</span>
+    <br />
+    <p [style.color]="ArrayOfProducts[4].isAvailable ? 'green' : 'red'">
+      {{ ArrayOfProducts[4].isAvailable ? 'Available' : 'Out of Stock' }}
+    </p>
+    <button (click)="msg()" [disabled]="!ArrayOfProducts[4].isAvailable">Buy Now</button>
+  </div>
+</div>

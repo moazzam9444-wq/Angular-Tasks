@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>{{ storeName }}</h1>
+
+  <div class="store-status">
+    <p>{{ storeDescription }}</p>
+    <h3>{{ storeStatus }}</h3>
+  </div>
+
+  <h3>Featured Product</h3>
+
+  <div class="featured">
+    <h3>{{ featuredProduct.productName }}</h3>
+    <p>{{ featuredProduct.description }}</p>
+
+    <span>${{ featuredProduct.price }}</span>
+    <span class="final-price">${{ finalPrice }}</span>
+    <span class="discount"> {{ discountPercentage }}% Discount </span>
+  </div>
+
+  <h3>Our Products</h3>
+
+  <table>
+    <tr>
+      <th *ngFor="let product of productNames">
+        {{ product }}
+      </th>
+    </tr>
+
+    <tr>
+      <td *ngFor="let price of productPrice">${{ price }}</td>
+    </tr>
+  </table>
+
+  <h3>Store Summary</h3>
+
+  <table class="summary">
+    <tr>
+      <td>{{ TotalNumberOfProducts }}</td>
+      <td>${{ MostExpensive }}</td>
+      <td>${{ Cheapest }}</td>
+      <td>${{ totalValue }}</td>
+    </tr>
+
+    <tr>
+      <td>Total Products</td>
+      <td>Highest Price</td>
+      <td>Lowest Price</td>
+      <td>Total Products Value</td>
+    </tr>
+  </table>
+</div>
