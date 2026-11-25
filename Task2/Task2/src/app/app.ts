@@ -65,4 +65,20 @@ export class App {
       this.totalValue += num;
     }
   }
+
+  ProductName = signal('Keyboord');
+  ProductDescription = signal('Mechinaical Keybord');
+  ProductPrice = signal(50);
+  ProductAvailability = signal(true);
+
+  cartProductName: string = '';
+  cartQuantity: number = 0;
+
+  receiveProductName(name: string) {
+    this.cartProductName = name;
+  }
+
+  reciveQuantity(quantity: number) {
+    this.cartQuantity = quantity;
+  }
 }

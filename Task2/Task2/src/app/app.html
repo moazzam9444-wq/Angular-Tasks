@@ -57,4 +57,19 @@
 </div>
 <app-product-list></app-product-list>
 <app-product-details></app-product-details>
+<app-product-details2></app-product-details2>
+<app-product-details2
+  [ProductName]="ProductName()"
+  [Description]="ProductDescription()"
+  [Price]="ProductPrice()"
+  [isAvailable]="ProductAvailability()"
+  (sendProductName)="receiveProductName($event)"
+  (SendQuantity)="reciveQuantity($event)"
+>
+</app-product-details2>
+<app-shopping-cart
+  [cartProductName]="cartProductName"
+  [cartQuantity]="cartQuantity"
+  [ProductPrice]="ProductPrice()"
+></app-shopping-cart>
 <app-footer></app-footer>

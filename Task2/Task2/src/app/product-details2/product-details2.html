@@ -1,0 +1,21 @@
+<div class="product-card">
+  <h1>Our Product Details</h1>
+
+  <h2>{{ ProductName }}</h2>
+
+  <p class="description">{{ Description }}</p>
+
+  <p class="price">Price: ${{ Price }}</p>
+
+  <p>Availability: {{ isAvailable ? 'In Stuck' : 'Out Of Stuck' }}</p>
+
+  <div class="quantity-controls">
+    <button (click)="decrease()">-</button>
+
+    <span>{{ Quantity() }}</span>
+
+    <button (click)="increase()">+</button>
+  </div>
+
+  <button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
+</div>

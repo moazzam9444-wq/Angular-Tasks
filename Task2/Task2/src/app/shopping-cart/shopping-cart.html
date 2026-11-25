@@ -1,0 +1,19 @@
+<div class="shopping-cart">
+  <h2>Shopping Cart</h2>
+
+  <div class="cart-item">
+    <h3>Product Name</h3>
+    <p>{{ cartProductName }}</p>
+
+    <div class="cart-details">
+      <p>Product Price:{{ ProductPrice }}</p>
+      <p>Selected Quantity: {{ cartQuantity }}</p>
+    </div>
+
+    <hr />
+
+    <div class="cart-total">
+      <h3>Total Price: {{ ProductPrice * cartQuantity }}</h3>
+    </div>
+  </div>
+</div>
