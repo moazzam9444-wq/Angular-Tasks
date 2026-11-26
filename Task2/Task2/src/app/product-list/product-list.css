@@ -54,3 +54,127 @@ h2 {
   background-color: gray;
   cursor: not-allowed;
 }
+h2 {
+  text-align: center;
+  color: #1e293b;
+  margin: 25px 0;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px #00000015;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 15px;
+  background-color: #f8fafc;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.product-category {
+  color: #64748b;
+}
+
+.product-status {
+  font-weight: bold;
+}
+
+.product-discount {
+  color: #ea580c;
+}
+
+.card button {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.order-status {
+  width: 80%;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px #00000010;
+}
+
+.order-status h2 {
+  color: #2563eb;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.order-status p {
+  color: #334155;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.discount-card {
+  background-color: #fef9c3;
+}
+
+.available-card {
+  border: 3px solid green;
+}
+
+.unavailable-card {
+  border: 3px solid red;
+}
+
+.premium-card {
+  box-shadow: 0 0 15px gold;
+}
+.category-section {
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.category-section h2 {
+  color: #333;
+}
+
+.category-section h3 {
+  color: #0d6efd;
+}
+
+.category-section p {
+  font-size: 18px;
+  color: #555;
+}

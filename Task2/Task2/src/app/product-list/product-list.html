@@ -75,3 +75,101 @@
     <button (click)="msg()" [disabled]="!ArrayOfProducts[4].isAvailable">Buy Now</button>
   </div>
 </div>
+
+<h2>Our Products</h2>
+
+<div class="products-container">
+  @for (item of products; track item.id) {
+    <div
+      class="card"
+      style="width: 18rem"
+      [ngClass]="{
+        'discount-card': item.discount > 0,
+        'available-card': item.isAvailable,
+        'unavailable-card': !item.isAvailable,
+        'premium-card': item.price > 500,
+      }"
+      [ngStyle]="{ opacity: item.isAvailable ? 1 : 0.5 }"
+    >
+      <img src="{{ item.image }}" class="card-img-top" width="250px" />
+
+      <div class="card-body">
+        <h5 class="card-title">Product Name: {{ item.name }}</h5>
+
+        <p class="product-category">Category : {{ item.category }}</p>
+
+        <p
+          class="card-text"
+          [ngStyle]="{
+            color: item.discount ? 'red' : 'black',
+            'font-size': item.price > 500 ? '25px' : '15px',
+          }"
+        >
+          Price : {{ item.price }}
+        </p>
+
+        @if (item.price > 500) {
+          <p>Premium-Product</p>
+        }
+
+        @if (item.isAvailable) {
+          <p class="product-status">Availability : Available</p>
+        } @else {
+          <p class="product-status">Availability : Out Of Stuck</p>
+        }
+
+        <p class="product-discount">Discount : {{ item.discount }}</p>
+
+        @if (item.discount > 0) {
+          <p>Special Offer</p>
+        } @else {
+          <p>No Discount</p>
+        }
+        @if (item.isAvailable) {
+          <button class="btn btn-primary">Buy Now</button>
+        }
+      </div>
+    </div>
+  }
+</div>
+
+<div class="order-status">
+  <h2>Order Status</h2>
+
+  @switch (orderStatus) {
+    @case ('Pending') {
+      <p>Your order is waiting for confirmation.</p>
+    }
+
+    @case ('Processing') {
+      <p>Your order is being prepared.</p>
+    }
+
+    @case ('Shipped') {
+      <p>Your order has been shipped.</p>
+    }
+
+    @case ('Delivered') {
+      <p>Your order has been delivered.</p>
+    }
+    @default {
+      <p>Unknown Order Status.</p>
+    }
+  }
+</div>
+
+<div class="category-section">
+  <h2>Product Categories</h2>
+
+  <h3>Selected Category: {{ selectedCategory }}</h3>
+
+  @if (selectedCategory === 'All Products') {
+    <p>Showing all products.</p>
+  } @else if (selectedCategory === 'Electronics') {
+    <p>Showing electronic products.</p>
+  } @else if (selectedCategory === 'Accessories') {
+    <p>Showing accessories.</p>
+  } @else {
+    <p>Unknown Category.</p>
+  }
+</div>
